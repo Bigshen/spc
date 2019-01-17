@@ -1,0 +1,45 @@
+		*{
+			margin:0;
+			padding:0;
+			/*text-indent:10px*/
+		}
+		.layout{
+			position: static;
+		}
+		.panel-body{
+			overflow:visible;
+		}
+		.layout-panel-east,
+		.layout-panel-west {
+			  z-index: 999;
+		}
+		.m-right{
+			margin-right:10px;
+		}
+		.nav-list .p-left{
+			padding-left:24px;
+		}
+		.north-s{
+			overflow: hidden;
+			height:100px;
+			background: linear-gradient(#FFEDD2 , white);
+		}
+		.north-s a:hover{
+			color:red;
+		}
+		.name-exit{
+			float: right;
+			position: relative;
+    		top: 55px;
+    		right: 50px;
+    		font-size: 17px;
+    		font-weight: bold;
+		}
+		#exitLog{
+			/* float: right; */
+    		/* font-size: 17px;
+    		font-weight: bold; */
+   			/* position: relative;
+    		top: 55px;
+    		right: 50px; */
+		}

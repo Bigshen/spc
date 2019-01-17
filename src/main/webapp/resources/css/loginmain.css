@@ -90,3 +90,14 @@
 		.container-footer{
 			height: 75px;
 		}
+		.btn-right{
+			position:relative;
+			left:85px;
+			width:65px;
+		}
+		.tips{
+			display:inline-block;
+			position: relative;
+    		right: 105px;	
+			width:180px;
+		}

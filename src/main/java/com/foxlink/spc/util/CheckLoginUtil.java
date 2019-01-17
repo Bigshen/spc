@@ -31,6 +31,10 @@ public class CheckLoginUtil implements HandlerInterceptor{
 		System.out.println("======"+requestURI+"======");
 		Object username =  SecurityContextHolder.getContext().getAuthentication().getName();
 		System.out.println(username);
+		if(requestURI.equals("/spc/")){
+			response.sendRedirect(request.getContextPath() + "/index");
+			return false;
+		}
 		if(username == null || username.equals("anonymousUser")){
 			if(request.getHeader("x-requested-with") != null&& request.getHeader("x-requested-with").equalsIgnoreCase("XMLHttpRequest")){
 				//如果是ajax请求响应头会有，x-requested-with；

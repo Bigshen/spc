@@ -1,5 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%-- <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page session="true"%> --%>
 <!DOCTYPE html>
 <%-- <%@ page import="java.io.*,java.util.*,java.sql.*"%>
 <%@ page import="javax.servlet.http.*,javax.servlet.*"%>
@@ -13,7 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="./resources/bootstrap-3.3.7-dist/css/bootstrap.min.css"> 
 <%-- 	<c:url value="./resources/bootstrap-3.3.7-dist/css/bootstrap.min.css" var="iconsCSS" />
 	<link href="${iconsCSS}" rel="stylesheet"> --%>
-	<link rel="stylesheet" type="text/css" href="./resources/css/main.css"> 
+	<link rel="stylesheet" type="text/css" href="./resources/css/loginmain.css"> 
 
 	<script type="text/javascript" src="./resources/jq/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="./resources/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
@@ -46,7 +48,18 @@
   							  <label for="exampleInputPassword">密碼Password</label>
   							  <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password" name = "password">
   							 </div>
-  							<button type="submit" class="btn btn-default">登陸</button>
+  							 <div class="tips">
+  							 	<c:if test="${not empty error}">
+                            		<div class="error" style="color:#FF0000">${error}</div>
+                           		 </c:if>
+                           		 <c:if test="${not empty logout}">
+                            		<div class="logout" style="color:#FF0000">${logout}</div>
+                           		 </c:if>
+                           		 <c:if test="${not empty kickout}">
+                            		<div class="kickout" style="color:#FF0000">${kickout}</div>
+                           		 </c:if>			
+  							 </div>
+  							<button type="submit" class="btn btn-default btn-right">登陸</button>
 						</form>
 					</div>	
   				  </div>

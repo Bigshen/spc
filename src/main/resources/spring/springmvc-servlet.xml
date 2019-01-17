@@ -15,7 +15,14 @@
         http://www.springframework.org/schema/tx/spring-tx-4.0.xsd" >  
   
     <!-- 开启注解 -->
-	<mvc:annotation-driven />
+	<mvc:annotation-driven>
+	   <!-- 解決中文亂碼 -->
+		<mvc:message-converters register-defaults="true">
+        		<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+            		<property name="supportedMediaTypes" value="text/html;charset=UTF-8"></property>
+        		</bean>
+    		</mvc:message-converters>
+	</mvc:annotation-driven>
 	
 	<!-- 让扫描spring扫描这个包下所有的类，让标注spring注解的类生效 -->
 	<context:component-scan base-package="com.foxlink.spc.controller"></context:component-scan>
@@ -30,8 +37,15 @@
 	
 	<!-- 视图解析器 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/pages/" />
+		<property name="prefix" value="/WEB-INF/pages/" />
 		<property name="suffix" value=".jsp"></property>
+	</bean>
+	
+	<!-- 定义multipart文件上传解析器  大小限制1024*1024*5 即5M-->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="5242880" />
+		<property name="defaultEncoding" value="UTF-8" />
+		<property name="resolveLazily" value="true" />
 	</bean>
       
    <mvc:interceptors>
@@ -39,7 +53,7 @@
       		<mvc:mapping path="/**" />
       		<mvc:mapping path="/" />
       		<mvc:exclude-mapping path="/Login"/>
-      		<mvc:exclude-mapping path="/index"/> 
+      		<!-- <mvc:exclude-mapping path="/index"/>  -->
       		<mvc:exclude-mapping path="/resources/**"/>  
       		<bean class="com.foxlink.spc.util.CheckLoginUtil"/>
       	</mvc:interceptor>

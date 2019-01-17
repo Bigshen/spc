@@ -6,7 +6,7 @@
     http://www.springframework.org/schema/beans 
     http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
 	<http auto-config="true">
-		<!-- <intercept-url pattern="/test**" access="hasRole('ROLE_ADMIN')" />  -->
+		<intercept-url pattern="/test**" access="hasRole('ROLE_ADMIN')" /> 
 		
 		<headers><frame-options disabled="true"/></headers>
 
@@ -14,7 +14,7 @@
 		<session-management>
 			<!-- 設置后登陆的将先登录的踢出系统 -->
 			<concurrency-control max-sessions="1"
-				error-if-maximum-exceeded="false" />
+				error-if-maximum-exceeded="false" expired-url="/Login?kickout"/>
 		</session-management>
 		
 		<!-- 尝试访问没有权限的页面时跳转的页面 -->		 	 

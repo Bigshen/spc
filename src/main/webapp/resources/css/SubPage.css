@@ -10,6 +10,9 @@
 	margin:0;
 	padding: 0;
 }
+html,body{
+	height:100%;
+}
 .form-horizontal > div{
 	margin-top:10px;
 	display: block;
@@ -28,8 +31,16 @@
 	top:0;
 	left:200px;
 } */
+.top{
+	height:30%;
+	border-bottom: 5px solid #e6efff;
+    box-shadow: 0 1px #69b2e9
+}
+.bottom{
+	height:70%;
+}
 .btn-left{
-	position:absolute; 
+	position:relative; 
 	top:170px;
 	right:200px;
 	width:150px;

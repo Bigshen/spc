@@ -49,7 +49,7 @@ public class testController {
 	
 	@RequestMapping(value="/ShowLinkManage",method=RequestMethod.GET)
 	public String ShowAllAccountPage(){
-		return "LinkManage";
+		return "CTPFileSelect";
 	}
 	
 	@RequestMapping(value="/testdb",method=RequestMethod.POST,produces="application/json;charset=utf-8")
