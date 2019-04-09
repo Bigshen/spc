@@ -71,7 +71,9 @@ $(document).ready(function () {
                     var obj = eval(m);
                     $("#pro-Name").append("<option></option>");
                     for (var i = 0; i < obj.length; i++) {
-                        $("#pro-Name").append("<option>" + obj[i].PROJECT_NAME + "</option>");
+                 if (obj[i].PROJECT_NAME!=null && obj[i].PROJECT_NAME!=""){
+                     $("#pro-Name").append("<option>" + obj[i].PROJECT_NAME + "</option>");
+                 }
                     }
                 }
             },
@@ -196,7 +198,9 @@ $(document).ready(function () {
                         var obj = eval(m);
                         $("#pro-Name").append("<option></option>");
                         for (var i = 0; i < obj.length; i++) {
-                            $("#pro-Name").append("<option>" + obj[i].PROJECT_NAME + "</option>");
+                            if (obj[i].PROJECT_NAME!=null && obj[i].PROJECT_NAME!="") {
+                                $("#pro-Name").append("<option>" + obj[i].PROJECT_NAME + "</option>");
+                            }
                         }
                     }
                 },
