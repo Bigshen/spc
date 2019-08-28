@@ -38,6 +38,11 @@ public class CheckLoginUtil implements HandlerInterceptor{
 		if(username == null || username.equals("anonymousUser")){
 			if(request.getHeader("x-requested-with") != null&& request.getHeader("x-requested-with").equalsIgnoreCase("XMLHttpRequest")){
 				//如果是ajax请求响应头会有，x-requested-with；
+//				response.setHeader("Access-Control-Allow-Origin", "*");
+//		        response.setHeader("Access-Control-Allow-Methods", "*");
+//		        response.setHeader("Access-Control-Max-Age", "3600");
+//		        response.setHeader("Access-Control-Allow-Headers",
+//		                "Origin, X-Requested-With, Content-Type, Accept");
                 response.setHeader("sessionstatus", "timeout");//在响应头设置session状态
 			}else{
 				response.sendRedirect(request.getContextPath() + "/Login");

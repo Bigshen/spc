@@ -43,7 +43,7 @@
 	
 	<!-- 定义multipart文件上传解析器  大小限制1024*1024*5 即5M-->
 	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-		<property name="maxUploadSize" value="5242880" />
+		<property name="maxUploadSize" value="104857600" />
 		<property name="defaultEncoding" value="UTF-8" />
 		<property name="resolveLazily" value="true" />
 	</bean>
@@ -57,6 +57,7 @@
       		<!-- <mvc:exclude-mapping path="/index"/>  -->
       		<mvc:exclude-mapping path="/resources/**"/>  
       		<mvc:exclude-mapping path="/SendMail/**"/> 
+      		<mvc:exclude-mapping path="/test/**"/> 
       		<bean class="com.foxlink.spc.util.CheckLoginUtil"/>
       	</mvc:interceptor>
       </mvc:interceptors> 

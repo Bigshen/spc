@@ -50,7 +50,7 @@ $(document).ready(function(){
 	}
 	
 	function upfileAjax(){
-		var form = document.getElementById('form1');
+		var form = document.getElementById(' ');
 		var formData = new FormData(form);
 		/*console.log(formData.get('file'));*/
 		  $.ajax({ 

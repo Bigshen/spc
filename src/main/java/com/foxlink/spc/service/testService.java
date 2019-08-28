@@ -1,10 +1,13 @@
 package com.foxlink.spc.service;
 
+import java.io.File;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.foxlink.spc.dao.testdao;
 
@@ -37,5 +40,18 @@ public class testService {
 		// TODO Auto-generated method stub
 		String result = testDAO.getEmp(id);
 		return result;
+	}
+	//查找賬戶
+	//CheckAccount
+	public boolean CheckAccount(String userName,String Password) {
+		// TODO Auto-generated method stub
+		//String result = testDAO.getEmp(id);
+		return testDAO.CheckAccount(userName,Password);
+	}
+	//ErWeiCode
+	public String ErWeiCode(File file) {
+		// TODO Auto-generated method stub
+		//String result = testDAO.getEmp(id);
+		return testDAO.ErWeiCode(file);
 	}
 }
