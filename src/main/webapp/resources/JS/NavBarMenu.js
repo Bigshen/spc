@@ -1,5 +1,5 @@
 var _menus ={
-	"menus":[{
+	"menus":[/*{
 		"menuid":"1",
 		"controll":"",
 		"rel":"LinkManage/ShowLinkManage",
@@ -11,8 +11,8 @@ var _menus ={
 	},{
 		"menuid":"2",
 		"controll":"",
-		"rel":"Measure/ShowMeasure",
-		"menuname":"FoxLink尺寸量測",
+		"rel":"FoxLinkMeasure.jsp",
+		"menuname":"萬濠尺寸量測",
 		"icon":"glyphicon-pencil",
 		"menus_s":[{
 			
@@ -20,7 +20,7 @@ var _menus ={
 	},{
 		"menuid":"3",
 		"controll":"",
-		"rel":"EleScaleMeasure/ShowEleScaleMeasure",
+		"rel":"",
 		"menuname":"電子稱重量量測",
 		"icon":"glyphicon-pencil",
 		"menus_s":[{
@@ -137,7 +137,7 @@ var _menus ={
 	},{
 		"menuid":"16",
 		"controll":"",
-		"rel":"MeasureDataEleScale/ShowMeasureDataEleScale",
+		"rel":"",
 		"menuname":"量測數據搜尋(電子稱)",
 		"icon":"glyphicon glyphicon-globe",
 		"menus_s":[{
@@ -155,7 +155,7 @@ var _menus ={
 	},{
 		"menuid":"18",
 		"controll":"",
-		"rel":"MeasureDataTOOL/ShowMeasureDataTOOL",
+		"rel":"",
 		"menuname":"量測數據搜尋(TOOL)",
 		"icon":"glyphicon glyphicon-globe",
 		"menus_s":[{
@@ -164,13 +164,32 @@ var _menus ={
 	},{
 		"menuid":"19",
 		"controll":"",
-		"rel":"MeasureDataOPTest/ShowMeasureDataOPTest",
+		"rel":"",
 		"menuname":"量測數據搜尋(OPTest)",
 		"icon":"glyphicon glyphicon-globe",
 		"menus_s":[{
 			
 		}]
-	}]
+	},*/{
+		"menuid":"20",
+		"controll":"",
+		"rel":"UploadSpcData/ShowSpcDataUp",
+		"menuname":"SPC數據上傳",
+		"icon":"glyphicon glyphicon-globe",
+		"menus_s":[{
+			
+		}]
+	},{
+		"menuid":"21",
+		"controll":"",
+		"rel":"LkTrendChart/query",
+		"menuname":"生成趨勢圖",
+		"icon":"glyphicon glyphicon-globe",
+		"menus_s":[{
+			
+		}]
+	}
+	]
 //	},{
 //		"menuid":"7",
 //		"controll":"UpdateSPEC",

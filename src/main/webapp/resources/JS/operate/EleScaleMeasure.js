@@ -331,7 +331,7 @@ $(document).ready(function () {
                         var obj = eval(m);
                         $('#EleScaleManageTable tbody').html('');
                         $('#EleScaleManageTable thead').html('');
-                        var thead="\t\t<tr><th>陳洋最帥</th></tr><tr>\n" +
+                        var thead="\t\t<tr><th style='text-align: center' colspan='13'>天平重量數據輸入</th></tr><tr>\n" +
                             "\t\t\t<th>尺寸/工站號</th>\n" +
                             "\t\t\t<th>檢驗項目</th>\n" +
                             "\t\t\t<th>尺寸</th>\n" +
